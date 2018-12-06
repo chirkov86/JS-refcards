@@ -50,7 +50,7 @@ const box6 = {
     position: 1,
     clickMe: () => {
         document.querySelector('.green').addEventListener('click', () => {
-            alert(This is box number ' + this.position);
+            alert('This is box number ' + this.position);
         });
     }
 }
