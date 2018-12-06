@@ -30,7 +30,7 @@ Instead regular functions have `this` pointing to the global object (e.g. "Windo
 Arrow functions do not have their own `this`. 
 Instead they share a surrounding's `this`.
 
-This is useful for writing methods that refer to object's properties.
+This is useful when it is necessary to preserve the value of `this`, e.g. for writing methods that refer to object's properties.
 
 ```javascript
 // ES5
