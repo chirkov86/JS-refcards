@@ -119,3 +119,32 @@ function multiply(a, b = 1) {
 Can be useful for constructors:
 ```javascript
 function Person(firstName, lastName = 'Smith') {...}
+```
+
+#### JS maps
+The Map object holds key-value pairs. Unlike object map:
+- keeps order
+- anything can be as either a key or a value (even in the same map instance)
+```javascript
+var myMap = new Map();
+
+var keyString = 'a string',
+    keyObj = {},
+    keyFunc = function() {};
+
+// setting the values
+myMap.set(keyString, "value associated with 'a string'");
+myMap.set(keyObj, 'value associated with keyObj');
+myMap.set(keyFunc, 'value associated with keyFunc');
+```
+- has `size` property
+- is iterable
+```javascript
+// iterate with for of
+for (var [key, value] of myMap) {
+  console.log(key + ' = ' + value);
+}
+
+// iterate with forEach
+map.forEach((key,value) => {...})
+```
