@@ -148,3 +148,41 @@ for (var [key, value] of myMap) {
 // iterate with forEach
 map.forEach((key,value) => {...})
 ```
+#### for...of statement
+The for...of statement creates a loop iterating over iterable objects, including: built-in `String`, `Array`, Array-like objects (e.g., `arguments` or `NodeList`), `Map` other iterables.
+```javascirpt
+let iterable = [10, 20, 30];
+
+for (let value of iterable) {
+  value += 1;
+  console.log(value);
+}
+```
+
+#### Usage of `typeof`
+```javascript
+// Numbers
+typeof 37 === 'number';
+typeof Number('1') === 'number'; // Number tries to parse things into numbers
+
+// But ind the following
+typeof new Number(1) === 'object';
+
+// Strings
+typeof '' === 'string';
+
+// Booleans
+typeof true === 'boolean';
+
+// Undefined
+typeof undefined === 'undefined';
+
+// Objects
+typeof {a: 1} === 'object';
+
+// use Array.isArray to differentiate regular objects from arrays
+typeof [1, 2, 4] === 'object';
+
+// Functions
+typeof function() {} === 'function';
+```
