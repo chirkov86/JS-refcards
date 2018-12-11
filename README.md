@@ -65,7 +65,7 @@ var b = 10;
 console.log(`Fifteen is ${a + b} and not ${2 * a + b}.`);
 ```
 
-#### `arguments`
+#### The `arguments` object
 `Arguments` is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.
 
 
