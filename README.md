@@ -85,3 +85,26 @@ function sum(...theArgs) {
 ```
 Unlike spread operator rest parameters are used in function's declaration.
 
+#### Spread syntax
+In ES6 spread operator expands an array into it's components
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+```
+
+Useful to copy or concatenate arrays:
+```javascript
+//Copy an array
+var arr = [1, 2, 3];
+var arr2 = [...arr]; // like arr.slice()
+
+// Concatenate
+var arr1 = [0, 1, 2];
+var arr2 = [3, 4, 5];
+arr1 = [...arr1, ...arr2];
+```
