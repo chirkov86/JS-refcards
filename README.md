@@ -47,7 +47,7 @@ It has an attached callback.
 2. When timer is off, a message with the callback is put into a message queue
 3. When execution stack gets empty, event loop polls message queue, finds a message there and puts an attached function into execution stack.
 This is how DOM events also get processed.
-4. Newly put callback function gets executed
+4. Supplied callback function gets executed
 ![event_loop](files/event_loop.png)
 
 #### Arrow functions VS functions
