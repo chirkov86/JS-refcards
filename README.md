@@ -67,5 +67,20 @@ console.log(`Fifteen is ${a + b} and not ${2 * a + b}.`);
 
 #### The `arguments` object
 `Arguments` is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.
+Rest parameters in ES6 should be preferred.
+```javascript
+function func1(a, b, c) {
+  console.log(arguments[0]);
+}
+```
 
+#### Rest parameters in ES6
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+```javascript
+function sum(...theArgs) {
+  return theArgs.reduce((previous, current) => {
+    return previous + current;
+  });
+}
+```
 
