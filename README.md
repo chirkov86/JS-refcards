@@ -108,3 +108,14 @@ var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];
 ```
+
+#### Default function parameters
+Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed.
+```javascript
+function multiply(a, b = 1) {
+  return a * b;
+}
+```
+Can be useful for constructors:
+```javascript
+function Person(firstName, lastName = 'Smith') {...}
