@@ -23,6 +23,12 @@ console.log(a); // 'a' is undefined here
 #### Function declaration VS function expression
 //TODO
 
+#### Execution context
+//TODO
+
+#### Event loop
+//TODO
+
 #### Arrow functions VS functions
 Methods are functions attached to an object. They can refer to the object via `this`.
 Instead regular functions have `this` pointing to the global object (e.g. "Window" object).
@@ -58,7 +64,7 @@ const box6 = {
 }
 ```
 
-#### Creating objects in JS
+#### Using constructors and classes to create objects in JS
 Function constructor way:
 ```javascript
 // mind the capital letter
@@ -70,7 +76,7 @@ var Person = function(firtstName, lastName, yearOfBirth) {
 
 // adding a method via prototype
 Person.prototype.calculateAge = function() {
-  return new Date().getFullYear - yearOfBirth;
+  return new Date().getFullYear() - yearOfBirth;
 }
 
 const john = new Person(...);
@@ -89,11 +95,32 @@ class Person {
   // mind no commas or semicolons inside class declaration
   
   calculateAge() {
-    return new Date().getFullYear - yearOfBirth;
+    return new Date().getFullYear() - this.yearOfBirth;
   }
+  
+  // statics are attached to a class not an object instance
+  static staticMethod() {...}
 }
 
 const john = new Person(...);
+
+// calling a static
+Person.staticMethod();
+```
+:exclamation: classes are not hoisted unlike variables
+:exclamation: only methods can be declared inside a class but not properties
+
+#### Inheritance
+ES5 way, usage of prototypes
+//TODO
+ES6 way, usage of `extends` and `super`:
+```javascript
+class Athlete extends Person {
+  constructor(firtstName, lastName, yearOfBirth, medals) {
+    super(firtstName, lastName, yearOfBirth);
+    this.medals = medals;
+  }
+}
 ```
 
 #### String tempaltes in ES6
