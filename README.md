@@ -86,7 +86,7 @@ function sum(...theArgs) {
 Unlike spread operator rest parameters are used in function's declaration.
 
 #### Spread syntax
-In ES6 spread operator expands an array into it's components
+In ES6 spread operator expands an iterable into it's components
 ```javascript
 function sum(x, y, z) {
   return x + y + z;
