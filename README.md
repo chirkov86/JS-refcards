@@ -27,7 +27,7 @@ console.log(a); // 'a' is undefined here
 //TODO
 
 #### Event loop
-//TODO
+![event_loop](files/event_loop.png)
 
 #### Arrow functions VS functions
 Methods are functions attached to an object. They can refer to the object via `this`.
