@@ -83,4 +83,5 @@ function sum(...theArgs) {
   });
 }
 ```
+Unlike spread operator rest parameters are used in function's declaration.
 
