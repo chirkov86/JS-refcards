@@ -62,7 +62,7 @@ const box6 = {
 Function constructor way:
 ```javascript
 // mind the capital letter
-var Person(firtstName, lastName, yearOfBirth) {
+var Person = function(firtstName, lastName, yearOfBirth) {
   this.firstName = firtstName;
   this.lastName = lastName;
   this.yearOfBirth = yearOfBirth;
