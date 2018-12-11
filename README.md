@@ -27,6 +27,13 @@ console.log(a); // 'a' is undefined here
 //TODO
 
 #### Event loop
+A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.
+1. JS script submits a `setTimeout` (which is a part of Web API, and lives outside of JS engine).
+It has an attached callback.
+2. When times is off, a message with the callback is put into a message queue
+3. When execution stack gets empty, event loop polls message queue, finds a message there and puts an attached function into execution stack.
+This is how DOM events also get processed.
+4. Newly put callback function gets executed
 ![event_loop](files/event_loop.png)
 
 #### Arrow functions VS functions
