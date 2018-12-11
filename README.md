@@ -27,7 +27,7 @@ console.log(a); // 'a' is undefined here
 //TODO
 
 #### Event loop
-A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.\
+A JS runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.\
 Example with `setTimeout()`:
 ```javascript
 const second = () => {
