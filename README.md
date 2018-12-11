@@ -58,6 +58,44 @@ const box6 = {
 }
 ```
 
+#### Creating objects in JS
+Function constructor way:
+```javascript
+// mind the capital letter
+var Person(firtstName, lastName, yearOfBirth) {
+  this.firstName = firtstName;
+  this.lastName = lastName;
+  this.yearOfBirth = yearOfBirth;
+}
+
+// adding a method via prototype
+Person.prototype.calculateAge = function() {
+  return new Date().getFullYear - yearOfBirth;
+}
+
+const john = new Person(...);
+```
+
+ES6 classes way:
+```javascript
+// each class has to declare a constructor
+class Person {
+  constructor(firtstName, lastName, yearOfBirth) {
+    this.firstName = firtstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+  }
+  
+  // mind no commas or semicolons inside class declaration
+  
+  calculateAge() {
+    return new Date().getFullYear - yearOfBirth;
+  }
+}
+
+const john = new Person(...);
+```
+
 #### String tempaltes in ES6
 ```javascript
 var a = 5;
