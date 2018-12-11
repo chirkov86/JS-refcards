@@ -44,7 +44,7 @@ first();
 ```
 1. JS script submits a `setTimeout` (which is a part of Web API, and lives outside of JS engine).
 It has an attached callback.
-2. When times is off, a message with the callback is put into a message queue
+2. When timer is off, a message with the callback is put into a message queue
 3. When execution stack gets empty, event loop polls message queue, finds a message there and puts an attached function into execution stack.
 This is how DOM events also get processed.
 4. Newly put callback function gets executed
