@@ -281,7 +281,7 @@ http://callbackhell.com/
 ### Promises
 Promise is a container for a future value of an async operation.
 
-Promises let async methods return values like sync methods: instead of immediately returning the final value, the asyn method returns a promise to supply the value at some point in the future.
+Promises let async methods return values like sync methods: instead of immediately returning the final value, an async method returns a promise to supply a value at some point in the future.
 
 A Promise is in one of these states:
 - pending: initial state, neither fulfilled nor rejected.
