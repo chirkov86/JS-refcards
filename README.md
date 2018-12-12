@@ -272,3 +272,8 @@ typeof [1, 2, 4] === 'object';
 // Functions
 typeof function() {} === 'function';
 ```
+
+
+#### Callback hell
+Many nested callbacks can produce "callback hell" and make code unmanagable
+http://callbackhell.com/
