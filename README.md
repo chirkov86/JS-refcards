@@ -294,26 +294,38 @@ A promise is said to be `settled` or `resolved` if it is either `fulfilled` or `
 As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
 
 ```javascript
-		// The only argument of Promise constructor is "executor function"
-		// It's arguments are "resolve" and "reject" which are callback functions 
-		// We call resolve() if what we were doing asynchronously was successful, and reject() if not.
-		const getIDs = new Promise((resolve, reject) => {
-			// Here some async task is put 
-			setTimeout(() => {
-				//...doing something...
-				// Resolve() takes an argument which is the final result of the promise
-				resolve([111,112]);				
-				// Here we do not need reject(), since setTimeout never fails
-				//reject('error happened');
-			}, 1500);
-		});
-		
-		// Consuming the promise
-		// then() allows to add an event handler for the case when a promise is fullfilled 
-		getIDs.then(IDs => {
-			//IDs.foreach()
-			console.log(IDs);
-		}).catch(error => {
-			console.log(error);
-		});
+// The only argument of Promise constructor is "executor function"
+// It's arguments are "resolve" and "reject" which are callback functions 
+// We call resolve() if what we were doing asynchronously was successful, and reject() if not.
+const getIDs = new Promise((resolve, reject) => {
+	// Here some async task is put 
+	setTimeout(() => {
+		//...doing something...
+		// Resolve() takes an argument which is the final result of the promise
+		resolve([111,112]);				
+		// Here we do not need reject(), since setTimeout never fails
+		//reject('error happened');
+	}, 1500);
+});
+
+// Consuming the promise
+// then() allows to add an event handler for the case when a promise is fullfilled 
+getIDs.then(IDs => {
+	//IDs.foreach()
+	console.log(IDs);
+}).catch(error => {
+	console.log(error);
+});
+```
+
+Promises consuming can be chained like 
+```javascript
+somePromise
+	.then(result => {
+	return somePromise2;
+	})
+	.then(result => {
+	return somePromise3;
+	})
+	.catch(error => {...});
 ```
