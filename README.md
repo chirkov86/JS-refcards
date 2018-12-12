@@ -1,6 +1,6 @@
 # JS-refcards
 
-#### `let` and `const` VS `var`
+### `let` and `const` VS `var`
 New `let` and `const` defined in ES6 are block scoped while `var` is function scoped.
 ```javascript
 {
@@ -11,7 +11,7 @@ New `let` and `const` defined in ES6 are block scoped while `var` is function sc
 console.log(a);
 ```
 
-#### IIFE (Immediately Invoked Function Expression)
+### IIFE (Immediately Invoked Function Expression)
 A way to immediately invoke a function expression, utilizing the function's execution context to create "privacy".
 ```javascript
 (function() { 
@@ -20,13 +20,13 @@ A way to immediately invoke a function expression, utilizing the function's exec
 
 console.log(a); // 'a' is undefined here
 ```
-#### Function declaration VS function expression
+### Function declaration VS function expression
 //TODO
 
-#### Execution context
+### Execution context
 //TODO
 
-#### Event loop
+### Event loop
 A JS runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.\
 Example with `setTimeout()`:
 ```javascript
@@ -50,7 +50,7 @@ This is how DOM events also get processed.
 4. Supplied callback function gets executed
 ![event_loop](files/event_loop.png)
 
-#### Arrow functions VS functions
+### Arrow functions VS functions
 Methods are functions attached to an object. They can refer to the object via `this`.
 Instead regular functions have `this` pointing to the global object (e.g. "Window" object).
 
@@ -85,7 +85,7 @@ const box6 = {
 }
 ```
 
-#### Using constructors and classes to create objects in JS
+### Using constructors and classes to create objects in JS
 Function constructor way:
 ```javascript
 // mind the capital letter
@@ -131,7 +131,7 @@ Person.staticMethod();
 :exclamation: classes are not hoisted unlike variables\
 :exclamation: only methods can be declared inside a class but not properties
 
-#### Inheritance
+### Inheritance
 ES5 way, usage of prototypes
 //TODO
 ES6 way, usage of `extends` and `super`:
@@ -144,14 +144,14 @@ class Athlete extends Person {
 }
 ```
 
-#### String tempaltes in ES6
+### String tempaltes in ES6
 ```javascript
 var a = 5;
 var b = 10;
 console.log(`Fifteen is ${a + b} and not ${2 * a + b}.`);
 ```
 
-#### The `arguments` object
+### The `arguments` object
 `Arguments` is an Array-like object accessible inside functions that contains the values of the arguments passed to that function.
 Rest parameters in ES6 should be preferred.
 ```javascript
@@ -160,7 +160,7 @@ function func1(a, b, c) {
 }
 ```
 
-#### Rest parameters in ES6
+### Rest parameters in ES6
 The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
 ```javascript
 function sum(...theArgs) {
@@ -171,7 +171,7 @@ function sum(...theArgs) {
 ```
 Unlike spread operator rest parameters are used in function's declaration.
 
-#### Spread syntax
+### Spread syntax
 In ES6 spread operator expands an iterable into it's components
 ```javascript
 function sum(x, y, z) {
@@ -195,7 +195,7 @@ var arr2 = [3, 4, 5];
 arr1 = [...arr1, ...arr2];
 ```
 
-#### Default function parameters
+### Default function parameters
 Default function parameters allow named parameters to be initialized with default values if no value or undefined is passed.
 ```javascript
 function multiply(a, b = 1) {
@@ -207,7 +207,7 @@ Can be useful for constructors:
 function Person(firstName, lastName = 'Smith') {...}
 ```
 
-#### JS maps
+### JS maps
 The Map object holds key-value pairs. Unlike object map:
 - keeps order
 - anything can be as either a key or a value (even in the same map instance)
@@ -234,7 +234,7 @@ for (var [key, value] of myMap) {
 // iterate with forEach
 map.forEach((key,value) => {...})
 ```
-#### for...of statement
+### for...of statement
 The for...of statement creates a loop iterating over iterable objects, including: built-in `String`, `Array`, Array-like objects (e.g., `arguments` or `NodeList`), `Map` other iterables.
 ```javascirpt
 let iterable = [10, 20, 30];
@@ -245,7 +245,7 @@ for (let value of iterable) {
 }
 ```
 
-#### Usage of `typeof`
+### Usage of `typeof`
 ```javascript
 // Numbers
 typeof 37 === 'number';
@@ -273,13 +273,12 @@ typeof [1, 2, 4] === 'object';
 typeof function() {} === 'function';
 ```
 
-
-#### Callback hell
+### Callback hell
 Many nested callbacks can produce "callback hell" and make code unmanagable
 http://callbackhell.com/
 
 
-#### Promises
+### Promises
 Promise is a container for a future value of an async operation.
 
 Promises let async methods return values like sync methods: instead of immediately returning the final value, the asyn method returns a promise to supply the value at some point in the future.
