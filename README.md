@@ -292,3 +292,25 @@ A Promise is in one of these states:
 A promise is said to be `settled` or `resolved` if it is either `fulfilled` or `rejected`, but not `pending`.
 
 As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
+
+```javascript
+// Promise constructor has "executor function" as argument
+// It's arguments are "resolve" and "reject" callback functions 
+// resolve() is called if what we were doing asynchronously was successful, and reject() if not.
+const getIDs = new Promise((resolve, reject) => {
+  // Here some async task is put 
+  setTimeout(() => {
+    //...doing something...
+    // Resolve() takes an argument which is the final result of the promise, e.g. an array
+    resolve([11,12]);
+    // Here we do not need reject(), since setTimeout() never fails
+  }, 1500);
+});
+
+// Consuming the promise
+// then() allows to add an event handler for the case when a promise is fullfilled 
+getIDs.then(IDs => {
+  //IDs.foreach()
+  console.log(IDs);
+});
+```
