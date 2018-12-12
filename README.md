@@ -1,4 +1,4 @@
-# JS-refcards
+# Javascript reference cards
 
 ### `let` and `const` VS `var`
 New `let` and `const` defined in ES6 are block scoped while `var` is function scoped.
@@ -329,3 +329,29 @@ somePromise
 	})
 	.catch(error => {...});
 ```
+
+### Async/await
+An `async` function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
+
+An `async` function can contain an `await` expression that pauses the execution of the function and waits for the passed Promise's resolution.
+
+:exclamation: Remember, the `await` keyword is only valid inside `async` functions.
+
+```javascript
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  var result = await resolveAfter2Seconds();
+  console.log(result);
+}
+
+asyncCall();
+```
+Async/await is another way of dealing with promises chain `.then(...).then(...)`
