@@ -128,7 +128,7 @@ const john = new Person(...);
 // calling a static
 Person.staticMethod();
 ```
-:exclamation: classes are not hoisted unlike variables
+:exclamation: classes are not hoisted unlike variables\
 :exclamation: only methods can be declared inside a class but not properties
 
 #### Inheritance
