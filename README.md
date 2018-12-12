@@ -322,10 +322,10 @@ Promises consuming can be chained like
 ```javascript
 somePromise
 	.then(result => {
-	return somePromise2;
+		return somePromise2;
 	})
 	.then(result => {
-	return somePromise3;
+		return somePromise3;
 	})
 	.catch(error => {...});
 ```
