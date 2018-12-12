@@ -277,3 +277,19 @@ typeof function() {} === 'function';
 #### Callback hell
 Many nested callbacks can produce "callback hell" and make code unmanagable
 http://callbackhell.com/
+
+
+#### Promises
+Promise is a container for a future value of an async operation.
+
+Promises let async methods return values like sync methods: instead of immediately returning the final value, the asyn method returns a promise to supply the value at some point in the future.
+
+A Promise is in one of these states:
+- pending: initial state, neither fulfilled nor rejected.
+- fulfilled: meaning that the operation completed successfully.
+- rejected: meaning that the operation failed.
+
+![promises](files/promises.png)
+A promise is said to be `settled` or `resolved` if it is either `fulfilled` or `rejected`, but not `pending`.
+
+As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
