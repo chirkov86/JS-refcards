@@ -288,7 +288,7 @@ A Promise is in one of these states:
 - fulfilled: meaning that the operation completed successfully.
 - rejected: meaning that the operation failed.
 
-![promises](files/promises.png)
+![promises](files/promises.png)\
 A promise is said to be `settled` or `resolved` if it is either `fulfilled` or `rejected`, but not `pending`.
 
 As the `Promise.prototype.then()` and `Promise.prototype.catch()` methods return promises, they can be chained.
