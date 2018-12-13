@@ -331,7 +331,7 @@ somePromise
 ```
 
 ### Async/await
-An `async` function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
+An ES7 `async` function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
 
 An `async` function can contain an `await` expression that pauses the execution of the function and waits for the passed Promise's resolution.
 
