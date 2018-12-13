@@ -50,6 +50,13 @@ This is how DOM events also get processed.
 4. Supplied callback function gets executed
 ![event_loop](files/event_loop.png)
 
+### Web API
+A Web API, in the context of the browser, simply is an API, provided by the browser.
+It is possilbe to communicate with Web API using JavaScript in order to solve some front-end problems.
+For example, DOM API is used often to manipulate DOM:\
+![DOM_api](files/DOM_api.jpeg)
+
+
 ### Arrow functions VS functions
 Methods are functions attached to an object. They can refer to the object via `this`.
 Instead regular functions have `this` pointing to the global object (e.g. "Window" object).
