@@ -364,3 +364,29 @@ async function asyncCall() {
 asyncCall();
 ```
 Async/await is another way of dealing with promises chain `.then(...).then(...)`
+
+### Fetch API and XMLHttpRequest
+Fetch API:
+```javascript
+fetch('./api/someUrl')
+    .then((response) => {
+        response.json().then((data) => { 
+            ... 
+        });
+    })
+    .catch((err) => { ... });
+```
+XMLHttpRequest:
+```javascript
+function reqListener() {
+    var data = JSON.parse(this.responseText);
+}
+
+function reqError(err) { ... }
+
+var oReq = new XMLHttpRequest();
+oReq.onload = reqListener;
+oReq.onerror = reqError;
+oReq.open('get', './api/some.json', true);
+oReq.send();
+```
