@@ -5,7 +5,7 @@
 - `===` provides strict equality comparison
 
 ### `let` and `const` VS `var`
-New `let` and `const` defined in ES6 are block scoped while `var` is function scoped.
+New `let` and `const` are block scoped while `var` is function scoped.
 ```javascript
 {
   var a = 'a';
