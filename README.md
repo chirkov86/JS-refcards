@@ -1,8 +1,8 @@
 # Javascript reference cards
 
 ### Equality in JS
-`==` performs a type conversion, e.g. `0 == '0'`, `null == undefined` etc
-`===` provides strict equality comparison
+- `==` performs a type conversion, e.g. `0 == '0'`, `null == undefined` etc
+- `===` provides strict equality comparison
 
 ### `let` and `const` VS `var`
 New `let` and `const` defined in ES6 are block scoped while `var` is function scoped.
