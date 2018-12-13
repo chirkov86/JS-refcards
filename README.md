@@ -56,6 +56,8 @@ It is possilbe to communicate with Web API using JavaScript in order to solve so
 For example, DOM API is used often to manipulate DOM:\
 ![DOM_api](files/DOM_api.jpeg)
 
+### CORS
+//TODO
 
 ### Arrow functions VS functions
 Methods are functions attached to an object. They can refer to the object via `this`.
