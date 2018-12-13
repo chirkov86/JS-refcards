@@ -141,8 +141,8 @@ Person.staticMethod();
 :exclamation: only methods can be declared inside a class but not properties
 
 ### Inheritance
-ES5 way, usage of prototypes
-//TODO
+ES5 way, usage of prototypes\
+//TODO\
 ES6 way, usage of `extends` and `super`:
 ```javascript
 class Athlete extends Person {
