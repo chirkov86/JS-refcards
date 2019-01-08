@@ -397,3 +397,14 @@ oReq.send();
 
 ### NodeJS, NPM, Bable, Webpack
 ![JS_tools](files/Capture.PNG)
+
+**NPM** is a package manager. Dependencies are defined in `package.json`.
+Dependencies are collected to project's folder until `--global` flag is not used.
+Flag `--save` makes a dependency to be stored to the `dependencies` section of the `package.json`, while using `--save-dev` stores a dependency to the `devDependencies` section.
+Running some npm script (like maven goal):
+```npm run dev```
+
+**Webpack** makes bundles from js, css or other files, e.g. `1.js`, `2.js` -> `bundle.js`. Provides an embedded http web server (instead of using `file:///` protocol) that reloads page when code is changed.
+```
+npm install webpack-dev-server --save-dev
+```
