@@ -264,7 +264,7 @@ for (let value of iterable) {
 typeof 37 === 'number';
 typeof Number('1') === 'number'; // Number tries to parse things into numbers
 
-// But ind the following
+// But mind the following
 typeof new Number(1) === 'object';
 
 // Strings
