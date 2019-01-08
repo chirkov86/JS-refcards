@@ -412,4 +412,4 @@ Webpack provides an embedded http web server for develop purposes (instead of us
 ```
 npm install webpack-dev-server --save-dev
 ```
-Webpack has plugins for processing source file, e.g. copying, injecting code.
+Webpack has plugins for processing source files, e.g. copying `index.html`.
