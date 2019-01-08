@@ -407,7 +407,8 @@ Running some npm script (like maven goal):
 npm run dev
 ```
 
-**Webpack** makes bundles from js, css or other files, e.g. `1.js`, `2.js` -> `bundle.js`. Provides an embedded http web server (instead of using `file:///` protocol) that reloads page when code is changed.
+**Webpack** makes bundles from js, css or other files, e.g. `1.js`, `2.js` -> `bundle.js`.\ 
+Webpack provides an embedded http web server for develop purposes (instead of using `file:///` protocol) that reloads page when code is changed.
 ```
 npm install webpack-dev-server --save-dev
 ```
