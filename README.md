@@ -431,6 +431,7 @@ export const ID = 23;
 // mind omitting .js
 import string1 from './models/Search'; // default import where "string1" is random name
 import { add, multiply, ID } from './views/searchView'; // import by name
+import axios from 'axios'; // import from node_modules requires only module name as it appears in "package.json"
 
 ```
 
@@ -441,3 +442,13 @@ Webpack is configured in a `webpack.config.js`.
 
 **Babel** converts ("polyfill") ES6, ES7 to ES5.\
 Babel is configured in a `.babelrc`.
+
+### Modules
+**Axios** for requests instead of fetch API and XHRs
+```javascript
+try {
+    const result = await axios(`https://www.food2fork.com/api/search?key=${key}&q=${query}`);
+} catch (error) {
+    alert(error);
+}
+```
