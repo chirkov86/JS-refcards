@@ -416,8 +416,10 @@ Scripts like `dev` are defined in `package.json`.
 **Webpack** makes bundles from js, css or other files, e.g. `1.js`, `2.js` -> `bundle.js`.
 Webpack allows using the `import` and `export` statements.\
 Using the import and export statements is a way to split large files into smaller, reusable modules of code.
-- `import` = "import JavaScript into this file so I can work with its code"
-- `export` = “export this JavaScript so it can be used elsewhere in the project"
+- `export` = “export this JavaScript so it can be used elsewhere in the project",\
+e.g. `export default 'I am an exported stuirng';`
+- `import` = "import JavaScript into this file so I can work with its code",\
+e.g. `import string1 from './models/Search'`
 
 Webpack also provides an embedded http web server (`webpack-dev-server`) for develop purposes (instead of using `file:///` protocol) that reloads page when code is changed.\
 Webpack has plugins for processing source files, e.g. copying `index.html` to `dist` folder.
