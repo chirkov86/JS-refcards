@@ -413,9 +413,8 @@ npm run dev
 ```
 Scripts like `dev` are defined in `package.json`.
 
-**Webpack** makes bundles from js, css or other files, e.g. `1.js`, `2.js` -> `bundle.js`.
-Webpack allows using the `import` and `export` statements.\
-Using the import and export statements is a way to split large files into smaller, reusable modules of code.
+**Webpack** makes bundles from js, css or other files, e.g. `1.js`, `2.js` -> `bundle.js`.\
+Webpack allows using the `import` and `export` statements which allows splitting large files into smaller, reusable modules of code.
 - `export` = “export this JavaScript so it can be used elsewhere in the project"
 - `import` = "import JavaScript into this file so I can work with its code"
 
