@@ -417,9 +417,25 @@ Scripts like `dev` are defined in `package.json`.
 Webpack allows using the `import` and `export` statements.\
 Using the import and export statements is a way to split large files into smaller, reusable modules of code.
 - `export` = “export this JavaScript so it can be used elsewhere in the project",\
-e.g. `export default 'I am an exported stuirng';`
+e.g. `export default 'I am an exported string';`
 - `import` = "import JavaScript into this file so I can work with its code",\
-e.g. `import string1 from './models/Search'`
+e.g. `import string1 from './models/Search';`
+
+```javascript
+// declare default export in Search.js
+export default 'I am an exported string';
+
+// declare named exports in searchView.js
+export const add = (a,b) => a + b;
+export const multiply = (a,b) => a * b;
+export const ID = 23;
+
+// in index.js
+// mind omitting .js
+import string1 from './models/Search'; // default import where "string1" is random name
+import { add, multiply, ID } from './views/searchView'; // import by name
+
+```
 
 Webpack also provides an embedded http web server (`webpack-dev-server`) for develop purposes (instead of using `file:///` protocol) that reloads page when code is changed.\
 Webpack has plugins for processing source files, e.g. copying `index.html` to `dist` folder.
