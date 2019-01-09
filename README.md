@@ -402,14 +402,22 @@ oReq.send();
 Dependencies are collected to project's folder until `--global` flag is not used.\
 Flag `--save` makes a dependency to be stored to the `dependencies` section of the `package.json`, while using `--save-dev` stores a dependency to the `devDependencies` section.
 
+Adding a dependency:
+```
+npm install webpack-dev-server --save-dev
+```
+
 Running some npm script (like maven goal):
 ```
 npm run dev
 ```
+Scripts like `dev` are defined in `package.json`.
 
 **Webpack** makes bundles from js, css or other files, e.g. `1.js`, `2.js` -> `bundle.js`.\
-Webpack provides an embedded http web server for develop purposes (instead of using `file:///` protocol) that reloads page when code is changed.
-```
-npm install webpack-dev-server --save-dev
-```
-Webpack has plugins for processing source files, e.g. copying `index.html`.
+Webpack also provides an embedded http web server (`webpack-dev-server`) for develop purposes (instead of using `file:///` protocol) that reloads page when code is changed.\
+Webpack has plugins for processing source files, e.g. copying `index.html` to `dist` folder.
+
+Webpack is configured in a `webpack.config.js`.
+
+**Babel** converts ("polyfill") ES6, ES7 to ES5.\
+Babel is configured in a `.babelrc`.
