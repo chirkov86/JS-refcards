@@ -442,12 +442,13 @@ Webpack is configured in a `webpack.config.js`.
 
 **import/export VS require**
 Import/export is an ES6 feature, `require` is CommonJS(Node.js).\
-ES6 `import`s require explicit `exports`s.\
-`require` automatically scan `./node_modules`.\
+ES6 `import`'s require explicit `export`'s.\
+`require` automatically scan `./node_modules` for modules by module name or any project file by path.\
 Examples:
 ```
 1) import * as  express from 'express';
 2) var express = require('express');
+3) var json = require('./sampleResult.json');
 ```
 Currently ES6 `import/export`s are transpyled to `require` by Babel.
 
