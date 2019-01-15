@@ -464,3 +464,14 @@ try {
     alert(error);
 }
 ```
+
+### Usefule hints
+To access a variable in a console
+```javascript
+window.r = state.recipe;
+```
+
+To copy JS object in a console as a JSON:
+- `console.log(obj)`
+- in a console RBM click on it -> `Store as global variable`
+- `copy(temp1)` // copies to clipboard as a JSON string
