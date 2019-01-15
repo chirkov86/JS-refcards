@@ -440,6 +440,17 @@ Webpack has plugins for processing source files, e.g. copying `index.html` to `d
 
 Webpack is configured in a `webpack.config.js`.
 
+**import/export VS require**
+Import/export is an ES6 feature, `require` is CommonJS(Node.js).\
+ES6 `import`s require explicit `exports`s.\
+`require` automatically scan `./node_modules`.\
+Examples:
+```
+1) import * as  express from 'express';
+2) var express = require('express');
+```
+Currently ES6 `import/export`s are transpyled to `require` by Babel.
+
 **Babel** converts ("polyfill") ES6, ES7 to ES5.\
 Babel is configured in a `.babelrc`.
 
