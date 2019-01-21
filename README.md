@@ -395,6 +395,13 @@ oReq.open('get', './api/some.json', true);
 oReq.send();
 ```
 
+### CSS selectors
+- `.intro` selects all elements with `class="intro"`
+- `#firstname` selects the element with `id="firstname"`
+- `*` selects all elements
+
+Full reference: https://www.w3schools.com/cssref/css_selectors.asp
+
 ### NodeJS, NPM, Bable, Webpack
 ![JS_tools](files/Capture.PNG)
 
