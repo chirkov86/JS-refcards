@@ -408,6 +408,16 @@ Example using complex CSS selectors:
     if (e.target.matches('.btn-decrease, .btn-decrease *')) {...}
 ```
 
+### Using `localStorage`
+`window.localStorage` is a property that allows to save key/value pairs in a web browser even when browser window/tab has been reloaded/closed.\
+The keys and the values are always strings (note that, as with objects, integer keys will be automatically converted to strings).
+```javascript
+localStorage.setItem('myCat', 'Tom');
+var cat = localStorage.getItem('myCat');
+```
+
+
+
 ### NodeJS, NPM, Bable, Webpack
 ![JS_tools](files/Capture.PNG)
 
