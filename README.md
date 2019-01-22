@@ -402,6 +402,12 @@ oReq.send();
 
 Full reference: https://www.w3schools.com/cssref/css_selectors.asp
 
+Example using complex CSS selectors:
+```javascript
+// event may happen on '.btn-decrease' class and child elements of '.btn-decrease' class
+    if (e.target.matches('.btn-decrease, .btn-decrease *')) {...}
+```
+
 ### NodeJS, NPM, Bable, Webpack
 ![JS_tools](files/Capture.PNG)
 
