@@ -418,7 +418,7 @@ var cat = localStorage.getItem('myCat');
 
 
 
-### NodeJS, NPM, Bable, Webpack
+### NodeJS, NPM, Babel, Webpack
 ![JS_tools](files/Capture.PNG)
 
 **NPM** is a package manager. Dependencies are defined in `package.json`.\
